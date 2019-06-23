@@ -34,9 +34,21 @@ You can now go to http://localhost:7154/RANDOM_STRING_FT67VGF667GH and see your 
 sudo docker ps -q | xargs sudo docker stats --no-stream
 ```
 
-## Stop
+## Stop container
 
 ```
 sudo docker stop file-server-7154
 sudo docker rm file-server-7154
 ```
+
+## cgroup config
+
+If you get some warning about `--memory-swap` flag, then you need to update `/etc/default/grub` and set:
+
+```
+GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
+```
+
+For this to propagate to the kernel, run `update-grub && reboot`.
+
+## Enjoy ;)
