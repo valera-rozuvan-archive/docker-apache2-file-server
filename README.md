@@ -36,6 +36,17 @@ You can now go to http://localhost:7154/RANDOM_STRING_FT67VGF667GH and see your 
 sudo docker ps -q | xargs sudo docker stats --no-stream
 ```
 
+## Check container volume mounts
+
+```
+$ sudo docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+754a56c8facc        file-server         "/usr/sbin/apache2 -…"   22 hours ago        Up 22 hours         0.0.0.0:7154->7154/tcp   file-server-7154
+
+$ sudo docker inspect -f "{{ .Mounts }}" 754a56c8facc
+[{bind  /absolute/host/path/to/data/folder /var/www/html/RANDOM_STRING_FT67VGF667GH   true rprivate}]
+```
+
 ## Stop container
 
 ```
