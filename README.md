@@ -13,6 +13,8 @@ sudo docker build -t file-server .
 
 ## Run
 
+Decide on the port number you want apache2 to run on. For this example, port 7154 was chosen. Please modify below commands accordingly, if you choose a different port number.
+
 ```
 sudo docker run \
   --name file-server-7154 \
