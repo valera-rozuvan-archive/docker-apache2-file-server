@@ -1,5 +1,11 @@
 # docker-apache2-file-server
 
+## wip has moved
+
+Future work on this repository has moved to the monorepo [valera-rozuvan/docker-recipes](https://github.com/valera-rozuvan/docker-recipes). This repo is archived for historic purposes (to preserve commit history). Navigate over to [docker-recipes/docker-apache2-file-server](https://github.com/valera-rozuvan/docker-recipes/tree/main/docker-apache2-file-server) to see updates (if any).
+
+## introduction
+
 Run an Apache2 static file server via Docker. Key features:
 
 - specify port at runtime
